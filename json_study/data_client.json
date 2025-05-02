@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "nome": "Alice Matos",
+        "email": "alice@example.com",
+        "interesses": [
+            "programação",
+            "mísica"
+        ],
+        "endereco": {
+            "rua": "Rua das Florestas, 61",
+            "cidade": "São Paulo"
+        }
+    },
+    {
+        "id": 2,
+        "nome": "Carlos Freire",
+        "email": "carlos@example.com",
+        "interesses": [
+            "academia",
+            "correr"
+        ],
+        "endereco": {
+            "rua": "Av. Azul, 61",
+            "cidade": "Salvador"
+        }
+    }
+]
