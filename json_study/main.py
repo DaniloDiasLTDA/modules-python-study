@@ -32,15 +32,19 @@ def search_clients():
 # Buscar apenas um cliente / # TODO: Adicionar Expect
 
 def search_name(user_name):
-    try:
         for client in data:
             if client['nome'].lower() == user_name.lower():
                 return client
-        return jsonify({'mensagem': f'Usuario {user_name} não encontrado'})
-    
+@app.route('/usuarios/clientes/<string:name>', methods=['GET'])
+def get_name(name):
+    try:
+        user = search_name(name)
+        if user:
+            return jsonify(user)
+        return jsonify({'mensagem': f'Usuario {user} não encontrado'})
     except TypeError as e:
         return jsonify({'message': f'valor {e} não permitido'})
-  
+
 
 
 # Atualizar o nome de um cliente
